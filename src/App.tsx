@@ -2,9 +2,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
 import { Todo } from './types/Todo';
-import { USER_ID } from './api/todos';
 import * as apiService from './api/todos';
-import classNames from 'classnames';
 import { TodoHeader } from './components/TodoHeader';
 import { TodoList } from './components/TodoList';
 import { TodoFooter } from './components/TodoFooter';
@@ -48,7 +46,6 @@ export const App: React.FC = () => {
 
         {todos.length > 0 && (
           <TodoFooter
-            todos={todos}
             filterBy={filterBy}
             setFilterBy={setFilterBy}
             notCompletedTasksCounter={notCompletedTasksCounter}

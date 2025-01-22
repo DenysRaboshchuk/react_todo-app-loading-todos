@@ -1,16 +1,13 @@
 import classNames from 'classnames';
-import { Todo } from '../types/Todo';
 import { TypeFilter } from '../types/TypeFilter';
 
 type Props = {
-  todos: Todo[];
   filterBy: TypeFilter;
   setFilterBy: React.Dispatch<React.SetStateAction<TypeFilter>>;
   notCompletedTasksCounter: number;
 };
 
 export const TodoFooter: React.FC<Props> = ({
-  todos,
   filterBy,
   setFilterBy,
   notCompletedTasksCounter,
