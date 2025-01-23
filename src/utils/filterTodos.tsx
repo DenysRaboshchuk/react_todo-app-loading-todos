@@ -5,8 +5,6 @@ export const getFilteredTodos = (todos: Todo[], filterBy: TypeFilter) => {
   const filteredTodos = [...todos];
 
   switch (filterBy) {
-    case TypeFilter.All:
-      return filteredTodos;
     case TypeFilter.Active:
       return filteredTodos.filter(todo => !todo.completed);
     case TypeFilter.Completed:
